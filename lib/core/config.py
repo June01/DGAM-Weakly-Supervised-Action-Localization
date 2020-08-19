@@ -22,9 +22,9 @@ config = edict()
 
 # common configs
 
-config.GPUS = '0'
-config.GPU_NUM = 1  # number of gpus in config.GPUS
-config.WORKERS = 4
+config.GPUS = '0,1'
+config.GPU_NUM = 2  # number of gpus in config.GPUS
+config.WORKERS = 6
 config.MODE = 'train'  # train / test
 config.IF_DETERMINISTIC = True  # whether to set all functions deterministic (for reproducibility)
 config.RANDOM_SEED_TORCH = 4995387260619361098
@@ -44,6 +44,7 @@ config.CUDNN.ENABLED = True
 
 # dataset related configs
 
+#config.DATASET_NAME = 'ActivityNet12'  # THUMOS14 / ActivityNet13
 config.DATASET_NAME = 'THUMOS14'  # THUMOS14 / ActivityNet12
 
 if config.DATASET_NAME == 'THUMOS14':
@@ -112,10 +113,10 @@ config.TRAIN.BETA = (0.8, 0.999)
 
 config.TRAIN.BEGIN_EPOCH = 0
 config.TRAIN.END_EPOCH = 6000
-config.TRAIN.BATCH_SIZE = 32
+config.TRAIN.BATCH_SIZE = 16
 
 config.TRAIN.PRINT_EVERY_STEP = 1
-config.TRAIN.TEST_EVERY_EPOCH = 10
+config.TRAIN.TEST_EVERY_EPOCH = 1000
 
 
 

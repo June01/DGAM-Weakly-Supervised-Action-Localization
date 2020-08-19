@@ -15,6 +15,13 @@ from core.config import config
 ATT_IM_DIM = 256  # intermediate output dimension of Att_Head
 
 
+# Add transformer as backbone for feature embedding
+# class Transformer(nn.Module):
+#     def __init__(self):
+#         super(Clf_Head, self).__init__()
+
+
+
 class Clf_Head(nn.Module):
     def __init__(self):
         super(Clf_Head, self).__init__()
