@@ -44,8 +44,8 @@ config.CUDNN.ENABLED = True
 
 # dataset related configs
 
-#config.DATASET_NAME = 'ActivityNet12'  # THUMOS14 / ActivityNet13
-config.DATASET_NAME = 'THUMOS14'  # THUMOS14 / ActivityNet12
+config.DATASET_NAME = 'ActivityNet12'  # THUMOS14 / ActivityNet13
+#config.DATASET_NAME = 'THUMOS14'  # THUMOS14 / ActivityNet12
 
 if config.DATASET_NAME == 'THUMOS14':
     config.DATASET = edict()
